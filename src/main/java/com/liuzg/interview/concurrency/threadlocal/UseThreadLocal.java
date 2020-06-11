@@ -10,6 +10,7 @@ package com.liuzg.interview.concurrency.threadlocal;
  **/
 public class UseThreadLocal {
 
+    //每个线程
     private static ThreadLocal<Integer> intLocal = ThreadLocal.withInitial(() -> 0);
 
     /**
@@ -27,6 +28,8 @@ public class UseThreadLocal {
 
     /**
      * 类说明：测试线程，线程的工作是将ThreadLocal变量的值变化，并写回，看看线程之间是否会互相影响
+     *
+     *   每个线程都有持有一个ThreadLocal对象，即intLocal是线程隔离的，相互不影响
      */
     public static class TestThread implements Runnable {
         int id;

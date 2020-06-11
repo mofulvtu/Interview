@@ -5,7 +5,7 @@ import com.liuzg.interview.concurrency.SleepTools;
 
 /**
  * <pre>
- *  Desc: ThreadLocal的线程如果改变的是类属性，则不安全
+ *  Desc: ThreadLocal的线程如果改变的是类属性，线程间共享,线程安全
  *         Number属性去掉static则相互不影响
  * </pre>
  *

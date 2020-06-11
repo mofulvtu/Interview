@@ -2,7 +2,7 @@ package com.liuzg.interview.concurrency.threadlocal;
 
 /**
  * <pre>
- *  Desc: 
+ *  Desc: count是类属性，线程间共享，则线程不安全
  * </pre>
  *
  * @author liuzg
@@ -25,7 +25,7 @@ public class NoThreadLocal {
     }
 
     /**
-     * count是类属性，线程间共享。
+     * count是类属性，线程间共享，则线程不安全
      */
     public static class TestTask implements Runnable {
         int id;
